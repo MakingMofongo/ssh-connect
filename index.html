@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Opening Termius...</title>
+<title>Connecting...</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body style="font-family:system-ui;text-align:center;padding:40px">
 <script>
-window.location.href = 'termius://';
-setTimeout(function() {
-  document.getElementById('msg').textContent = 'Tap your saved host in Termius, then paste the command from Telegram.';
-}, 1500);
+var p = new URLSearchParams(window.location.search);
+var u = p.get('u') || 'rashe';
+var h = p.get('h') || '100.111.29.72';
+window.location.href = 'ssh://' + u + '@' + h;
 </script>
-<p id="msg">Opening Termius...</p>
+<p>Opening Termius...</p>
 </body>
 </html>
