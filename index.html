@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Connecting to SSH...</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body style="font-family:system-ui;text-align:center;padding:40px">
+<script>
+var p = new URLSearchParams(window.location.search);
+var u = p.get('u') || 'rashe';
+var h = p.get('h') || '100.111.29.72';
+window.location.href = 'ssh://' + u + '@' + h;
+</script>
+<p>Opening Termius...</p>
+<p><a href="javascript:void(0)" onclick="window.location.href='ssh://'+new URLSearchParams(window.location.search).get('u')+'@'+new URLSearchParams(window.location.search).get('h')">Tap here if not redirected</a></p>
+</body>
+</html>
